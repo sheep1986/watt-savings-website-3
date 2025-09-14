@@ -80,26 +80,26 @@ const QuoteForm = ({ variant = 'default' }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`rounded-2xl p-8 ${variant === 'dark' ? 'bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-xl border border-white/10' : 'bg-gradient-to-br from-white to-gray-50/50 shadow-2xl border border-gray-100'}`}
+      className={`rounded-3xl p-10 max-w-md mx-auto ${variant === 'dark' ? 'bg-white/95 backdrop-blur-xl' : 'bg-white shadow-xl'}`}
     >
-      {/* Form Header */}
+      {/* Simple Header */}
       <div className="text-center mb-8">
-        <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl mb-6 shadow-lg">
-          <Zap className="w-10 h-10 text-white" />
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-500 rounded-2xl mb-4">
+          <Zap className="w-8 h-8 text-white" />
         </div>
-        <h3 className={`text-3xl font-bold mb-3 ${variant === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">
           Get Your Free Quote ⚡
         </h3>
-        <p className={`text-lg ${variant === 'dark' ? 'text-white/70' : 'text-gray-600'}`}>
-          Enter your postcode to start saving on business energy
+        <p className="text-gray-600">
+          Enter your postcode to start saving
         </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Postcode Input */}
+        {/* Clean Postcode Input */}
         <div className="space-y-3">
-          <label className={labelClasses}>
-            <MapPin className="w-6 h-6 text-primary-600" />
+          <label className="block text-sm font-semibold text-gray-700 flex items-center gap-2">
+            <MapPin className="w-4 h-4 text-primary-500" />
             Business Postcode
           </label>
           <div className="relative">
@@ -109,66 +109,57 @@ const QuoteForm = ({ variant = 'default' }) => {
               value={postcode}
               onChange={handlePostcodeChange}
               required
-              className={`${inputClasses} pr-16`}
+              className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl text-lg font-medium focus:outline-none focus:border-primary-500 focus:ring-0 transition-all duration-200 bg-gray-50 hover:bg-white hover:border-gray-300"
               placeholder="e.g. SW1A 1AA"
               maxLength="8"
             />
             <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
               {validatingPostcode ? (
-                <div className="w-6 h-6 border-2 border-primary-600 border-t-transparent rounded-full animate-spin"></div>
+                <div className="w-5 h-5 border-2 border-primary-500 border-t-transparent rounded-full animate-spin"></div>
               ) : postcodeValidation ? (
                 postcodeValidation.valid ? (
-                  <CheckCircle className="w-6 h-6 text-green-500" />
+                  <CheckCircle className="w-5 h-5 text-green-500" />
                 ) : (
-                  <AlertCircle className="w-6 h-6 text-red-500" />
+                  <AlertCircle className="w-5 h-5 text-red-500" />
                 )
-              ) : (
-                <MapPin className="w-6 h-6 text-gray-400" />
-              )}
+              ) : null}
             </div>
           </div>
           
-          {/* Validation Messages */}
+          {/* Clean Validation Messages */}
+          {postcodeValidation && postcodeValidation.valid && (
+            <p className="text-green-600 text-sm flex items-center gap-2">
+              <CheckCircle className="w-4 h-4" />
+              {postcodeValidation.district}, {postcodeValidation.region}
+            </p>
+          )}
           {postcodeValidation && !postcodeValidation.valid && (
-            <p className="text-red-500 text-sm mt-2 flex items-center gap-2">
+            <p className="text-red-500 text-sm flex items-center gap-2">
               <AlertCircle className="w-4 h-4" />
               {postcodeValidation.error}
             </p>
           )}
-          {postcodeValidation && postcodeValidation.valid && (
-            <p className="text-green-600 text-sm mt-2 flex items-center gap-2">
-              <CheckCircle className="w-4 h-4" />
-              {postcodeValidation.district}, {postcodeValidation.region}
-              {postcodeValidation.energyRegion && ` • ${postcodeValidation.energyRegion}`}
-            </p>
-          )}
         </div>
 
-        {/* Submit Button */}
+        {/* Clean Submit Button */}
         <motion.button
           type="submit"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className={`w-full py-5 rounded-xl font-bold text-xl transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 ${
-            variant === 'dark'
-              ? 'bg-white text-primary-600 hover:bg-gray-100'
-              : 'bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 text-white hover:from-primary-700 hover:via-primary-800 hover:to-primary-900'
-          }`}
+          className="w-full py-4 bg-primary-500 hover:bg-primary-600 text-white font-bold text-lg rounded-xl transition-all duration-200 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl"
         >
-          <div className="flex items-center justify-center w-8 h-8 bg-white/20 rounded-full">
-            <ArrowRight className="w-5 h-5" />
-          </div>
-          <span>Get My Free Quote 🚀</span>
+          <ArrowRight className="w-5 h-5" />
+          Get My Free Quote 🚀
         </motion.button>
 
-        {/* Security Badge */}
-        <div className={`text-center space-y-2 ${variant === 'dark' ? 'text-white/70' : 'text-gray-500'}`}>
-          <div className="flex items-center justify-center gap-2 text-sm">
-            <CheckCircle className="w-4 h-4 text-green-500" />
-            <span className="text-green-600 font-semibold">100% Free • No Obligation • Instant Quote</span>
+        {/* Simple Security Badge */}
+        <div className="text-center">
+          <div className="flex items-center justify-center gap-2 text-sm text-green-600 font-medium">
+            <CheckCircle className="w-4 h-4" />
+            100% Free • No Obligation • Instant Quote
           </div>
-          <p className="text-xs">
-            Secure postcode check • Compare 30+ suppliers instantly
+          <p className="text-xs text-gray-500 mt-1">
+            Compare 30+ suppliers instantly
           </p>
         </div>
       </form>
