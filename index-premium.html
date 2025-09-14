@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watt Savings - Business Energy Comparison | Save Up to 45%</title>
+    <meta name="description" content="Compare business energy prices from 30+ UK suppliers. Expert energy consultants helping businesses save on electricity and gas. Free comparison service." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Trustpilot Script -->
+    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        accent: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'display': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .supplier-scroll { animation: scroll 25s linear infinite; }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .loading-spinner {
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #16a34a;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(34, 197, 94, 0.2) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+            z-index: 0;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .glow {
+            box-shadow: 0 0 30px rgba(34, 197, 94, 0.3);
+        }
+        .pulse-glow {
+            animation: pulseGlow 2s ease-in-out infinite alternate;
+        }
+        @keyframes pulseGlow {
+            from { box-shadow: 0 0 20px rgba(34, 197, 94, 0.4); }
+            to { box-shadow: 0 0 40px rgba(34, 197, 94, 0.6); }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="public/watt-savings-logo.png" alt="Watt Savings" class="h-12 w-auto">
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium flex items-center">
+                            Energy Services
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <div class="py-2">
+                                <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600">Business Electricity</a>
+                                <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600">Business Gas</a>
+                                <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600">Multi-Site Energy</a>
+                                <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600">Solar Energy</a>
+                                <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600">Green Energy</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium flex items-center">
+                            Resources
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <div class="py-2">
+                                <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600">Energy Saving Tips</a>
+                                <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600">Bill Validation</a>
+                                <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600">Contract Types</a>
+                                <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600">Switching Process</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#" class="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium">Case Studies</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="tel:01618338661" class="text-gray-600 hover:text-gray-900 text-sm font-medium">
+                        0161 833 8661
+                    </a>
+                    <button onclick="showQuoteModal()" class="bg-primary-600 text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-primary-700 transition-colors">
+                        Get a Quote
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="lg:hidden p-2" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="lg:hidden hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-3 space-y-3">
+                <a href="#" class="block text-gray-700 hover:text-primary-600 font-medium">Energy Services</a>
+                <a href="#" class="block text-gray-700 hover:text-primary-600 font-medium">Resources</a>
+                <a href="#" class="block text-gray-700 hover:text-primary-600 font-medium">About</a>
+                <a href="#" class="block text-gray-700 hover:text-primary-600 font-medium">Case Studies</a>
+                <div class="pt-3 border-t border-gray-100">
+                    <button onclick="showQuoteModal()" class="w-full bg-primary-600 text-white px-4 py-2 rounded-lg font-semibold">
+                        Get a Quote
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 hero-content">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="mb-6">
+                        <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-primary-600 to-green-500 text-white glow">
+                            <i class="fas fa-bolt mr-2"></i>
+                            #1 Business Energy Experts
+                        </span>
+                    </div>
+                    
+                    <h1 class="text-5xl lg:text-7xl font-black leading-tight mb-8 bg-gradient-to-r from-white via-gray-100 to-primary-200 bg-clip-text text-transparent">
+                        Cut Your Energy Bills by 
+                        <span class="text-primary-400 animate-pulse">45%</span>
+                    </h1>
+                    
+                    <p class="text-xl lg:text-2xl text-gray-300 mb-10 leading-relaxed font-light">
+                        Join 10,000+ UK businesses saving money with our expert energy comparison service. 
+                        <span class="text-primary-400 font-semibold">Free quotes in 60 seconds.</span>
+                    </p>
+                    
+                    <!-- Enhanced Service Categories -->
+                    <div class="grid grid-cols-2 gap-6 mb-12">
+                        <div class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-primary-400/50 transition-all duration-300 floating" style="animation-delay: 0s;">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-bolt text-primary-400 text-2xl mr-3"></i>
+                                <h3 class="font-bold text-lg">Electricity</h3>
+                            </div>
+                            <p class="text-sm text-gray-300">Compare 30+ suppliers</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-primary-400/50 transition-all duration-300 floating" style="animation-delay: 0.5s;">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-fire text-orange-400 text-2xl mr-3"></i>
+                                <h3 class="font-bold text-lg">Gas</h3>
+                            </div>
+                            <p class="text-sm text-gray-300">Best commercial rates</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-primary-400/50 transition-all duration-300 floating" style="animation-delay: 1s;">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-solar-panel text-yellow-400 text-2xl mr-3"></i>
+                                <h3 class="font-bold text-lg">Solar</h3>
+                            </div>
+                            <p class="text-sm text-gray-300">Generate your own power</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-primary-400/50 transition-all duration-300 floating" style="animation-delay: 1.5s;">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-leaf text-green-400 text-2xl mr-3"></i>
+                                <h3 class="font-bold text-lg">Green Energy</h3>
+                            </div>
+                            <p class="text-sm text-gray-300">100% renewable options</p>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <button onclick="showQuoteModal()" class="group relative bg-gradient-to-r from-primary-600 to-green-600 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:from-primary-700 hover:to-green-700 transition-all duration-300 pulse-glow transform hover:scale-105">
+                            <span class="flex items-center justify-center">
+                                <i class="fas fa-rocket mr-3 group-hover:animate-bounce"></i>
+                                Get Free Quote Now
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </button>
+                        <a href="tel:01618338661" class="group bg-white/10 backdrop-blur-md border-2 border-white/30 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/20 hover:border-primary-400/50 transition-all duration-300 text-center transform hover:scale-105">
+                            <span class="flex items-center justify-center">
+                                <i class="fas fa-phone mr-3 group-hover:animate-pulse"></i>
+                                Call 0161 833 8661
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="flex items-center mt-8 space-x-8 text-sm text-gray-400">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary-400 mr-2"></i>
+                            No upfront costs
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-primary-400 mr-2"></i>
+                            24hr response
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-shield-alt text-primary-400 mr-2"></i>
+                            FCA regulated
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden lg:block">
+                    <div class="bg-white rounded-3xl shadow-2xl p-8 glow transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-center mb-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Get your free energy quote</h3>
+                            <p class="text-gray-600">Join 10,000+ businesses saving money</p>
+                        </div>
+                        <form onsubmit="handleQuoteSubmit(event)" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Business Name</label>
+                                <input name="businessName" type="text" required class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200" placeholder="Your business name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Contact Name</label>
+                                <input name="contactName" type="text" required class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200" placeholder="Your full name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
+                                <input name="email" type="email" required class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200" placeholder="your@email.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                                <input name="phone" type="tel" required class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200" placeholder="Your phone number">
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-primary-600 to-green-600 text-white py-5 rounded-xl font-bold text-lg hover:from-primary-700 hover:to-green-700 transition-all duration-300 transform hover:scale-105 pulse-glow">
+                                Get My Free Quote
+                            </button>
+                            <p class="text-xs text-gray-500 text-center">No spam. Unsubscribe anytime.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="py-8 bg-gray-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+                <div class="flex items-center space-x-8">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-gray-900">10,000+</div>
+                        <div class="text-sm text-gray-600">Businesses helped</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-gray-900">£2.1M</div>
+                        <div class="text-sm text-gray-600">Total saved</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-gray-900">4.8/5</div>
+                        <div class="text-sm text-gray-600">Trustpilot rating</div>
+                    </div>
+                </div>
+                
+                <!-- Trustpilot Integration with real reviews -->
+                <div class="flex items-center space-x-4">
+                    <!-- Trustpilot Widget - Real-time reviews -->
+                    <div class="trustpilot-widget" data-locale="en-GB" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="5f8e8a0b8a1f8f0001a1b1c1" data-style-height="24px" data-style-width="100%" data-theme="light" data-min-review-count="10" data-without-reviews-preferred-string-id="1" data-string-id="1">
+                        <a href="https://uk.trustpilot.com/review/wattsavings.co.uk" target="_blank" rel="noopener" class="flex items-center space-x-2">
+                            <div class="flex text-green-500 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-600 font-medium">4.8 Excellent</span>
+                            <span class="text-sm text-gray-500">• 247 reviews</span>
+                            <img src="https://cdn.trustpilot.net/brand-assets/4.1.0/logo-white.svg" alt="Trustpilot" class="h-4 w-auto opacity-60">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supplier Carousel - Enhanced Design -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">We compare prices from</h2>
+                <p class="text-gray-600">30+ energy suppliers to find you the best deal</p>
+            </div>
+            <div class="relative overflow-hidden">
+                <div class="flex space-x-12 supplier-scroll">
+                    <img src="public/supplier-logos/british-gas.png" alt="British Gas" class="h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="public/supplier-logos/edf.png" alt="EDF" class="h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="public/supplier-logos/eon-next.png" alt="E.ON" class="h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="public/supplier-logos/scottish-power.png" alt="Scottish Power" class="h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="public/supplier-logos/opus.png" alt="Opus" class="h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="public/supplier-logos/crown.png" alt="Crown" class="h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="public/supplier-logos/total.png" alt="Total" class="h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="public/supplier-logos/utilita.png" alt="Utilita" class="h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="public/supplier-logos/yu.png" alt="Yu Energy" class="h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="public/supplier-logos/sefe.png" alt="SEFE" class="h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity">
+                    <!-- Duplicate for seamless loop -->
+                    <img src="public/supplier-logos/british-gas.png" alt="British Gas" class="h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="public/supplier-logos/edf.png" alt="EDF" class="h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="public/supplier-logos/eon-next.png" alt="E.ON" class="h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Energy solutions for your business</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">From electricity and gas to solar and green energy, we help you find the right energy solution for your business needs.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-bolt text-primary-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Business Electricity</h3>
+                    <p class="text-gray-600 mb-4">Compare electricity tariffs and find competitive rates for your business energy needs.</p>
+                    <a href="#" class="text-primary-600 font-medium hover:text-primary-700">Learn more →</a>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-fire text-primary-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Business Gas</h3>
+                    <p class="text-gray-600 mb-4">Find the best gas deals and switch to save on your commercial gas costs.</p>
+                    <a href="#" class="text-primary-600 font-medium hover:text-primary-700">Learn more →</a>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-solar-panel text-primary-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Solar Energy</h3>
+                    <p class="text-gray-600 mb-4">Install solar panels and generate your own renewable energy to reduce costs.</p>
+                    <a href="#" class="text-primary-600 font-medium hover:text-primary-700">Learn more →</a>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-leaf text-primary-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Green Energy</h3>
+                    <p class="text-gray-600 mb-4">Switch to 100% renewable energy and reduce your carbon footprint.</p>
+                    <a href="#" class="text-primary-600 font-medium hover:text-primary-700">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">How we help you switch</h2>
+                <p class="text-xl text-gray-600">Simple process, expert guidance, significant savings</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Compare</h3>
+                    <p class="text-gray-600">We compare prices from 30+ suppliers to find you the best deal for your business.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Choose</h3>
+                    <p class="text-gray-600">Review your options and choose the energy contract that best fits your needs.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Switch</h3>
+                    <p class="text-gray-600">We handle the entire switching process with no interruption to your supply.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to save on your business energy?</h2>
+            <p class="text-xl text-primary-100 mb-8">Get a free quote in under 2 minutes</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="showQuoteModal()" class="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Get Your Quote
+                </button>
+                <a href="tel:01618338661" class="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                    Call 0161 833 8661
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="public/watt-savings-logo.png" alt="Watt Savings" class="h-12 w-auto mb-4 brightness-0 invert">
+                    <p class="text-gray-400 text-sm mb-4">Expert energy consultants helping UK businesses find better energy deals since 2015.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Business Electricity</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Business Gas</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Solar Energy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Green Energy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Energy Saving Tips</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p>Phone: 0161 833 8661</p>
+                        <p>Email: info@wattsavings.co.uk</p>
+                        <p>Company Reg: 09760461</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 Watt Savings Ltd. All rights reserved. Authorised and regulated by Ofgem.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quote Modal -->
+    <div id="quoteModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-xl max-w-md w-full p-8 relative">
+                <button onclick="hideQuoteModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Get your free energy quote</h3>
+                <form onsubmit="handleQuoteSubmit(event)" class="space-y-4">
+                    <input type="text" placeholder="Business name" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    <input type="text" placeholder="Contact name" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    <input type="email" placeholder="Email address" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    <input type="tel" placeholder="Phone number" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    <button type="submit" class="w-full bg-primary-600 text-white py-4 rounded-lg font-semibold hover:bg-primary-700">
+                        Get My Quote
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function showQuoteModal() {
+            document.getElementById('quoteModal').classList.remove('hidden');
+        }
+
+        function hideQuoteModal() {
+            document.getElementById('quoteModal').classList.add('hidden');
+        }
+
+        async function handleQuoteSubmit(event) {
+            event.preventDefault();
+            
+            // Show loading state
+            const submitButton = event.target.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Submitting...';
+            submitButton.disabled = true;
+            
+            try {
+                // Collect form data
+                const formData = new FormData(event.target);
+                const data = Object.fromEntries(formData.entries());
+                
+                // Submit to Google Sheets
+                const success = await submitQuoteForm(data);
+                
+                if (success) {
+                    alert('Thank you for your interest! We will contact you within 24 hours with your free quote.');
+                    event.target.reset();
+                    hideQuoteModal();
+                } else {
+                    alert('There was an issue submitting your form. Please try again or call us directly at 0161 833 8661.');
+                }
+            } catch (error) {
+                console.error('Form submission error:', error);
+                alert('There was an issue submitting your form. Please try again or call us directly at 0161 833 8661.');
+            } finally {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            }
+        }
+        
+        async function submitQuoteForm(formData) {
+            try {
+                // Prepare data for Google Sheets
+                const submissionData = {
+                    ...formData,
+                    formType: 'QUOTE_FORM',
+                    timestamp: new Date().toISOString(),
+                    pageUrl: window.location.href,
+                    userAgent: navigator.userAgent.substring(0, 200)
+                };
+                
+                // Your Google Apps Script URL - Replace with actual URL after deployment
+                const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID_HERE/exec';
+                
+                console.log('Submitting form data:', submissionData);
+                
+                // Method 1: POST request
+                try {
+                    await fetch(GOOGLE_SHEETS_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(submissionData)
+                    });
+                    console.log('Form submitted successfully');
+                } catch (fetchError) {
+                    console.log('POST failed, trying backup method');
+                    
+                    // Method 2: GET with parameters as backup
+                    const params = new URLSearchParams(submissionData);
+                    const getUrl = `${GOOGLE_SHEETS_URL}?${params.toString()}`;
+                    const img = new Image();
+                    img.src = getUrl;
+                }
+                
+                return true;
+            } catch (error) {
+                console.error('Error submitting to Google Sheets:', error);
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

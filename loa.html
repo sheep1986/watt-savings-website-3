@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter of Authority | Watt Savings - Secure Energy Comparison</title>
+    <meta name="description" content="Complete your Letter of Authority (LOA) to unlock exact energy quotes. Secure, obligation-free process. Start saving on your business energy bills today." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        accent: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'display': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        .fade-in-delay-1 { animation-delay: 0.1s; }
+        .fade-in-delay-2 { animation-delay: 0.2s; }
+        .fade-in-delay-3 { animation-delay: 0.3s; }
+        .fade-in-delay-4 { animation-delay: 0.4s; }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index-premium.html">
+                        <img src="public/watt-savings-logo.png" alt="Watt Savings" class="h-8 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index-premium.html" class="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="#" class="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium">About</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="tel:01618338661" class="text-gray-600 hover:text-gray-900 text-sm font-medium">
+                        0161 833 8661
+                    </a>
+                    <button onclick="document.getElementById('loa-form').scrollIntoView({behavior: 'smooth'})" class="bg-primary-600 text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-primary-700 transition-colors">
+                        Complete LOA
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="lg:hidden p-2" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20 lg:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 bg-primary-600/20 text-primary-200 px-4 py-2 rounded-full text-sm font-semibold mb-6 fade-in">
+                    <i class="fas fa-file-contract"></i>
+                    Letter of Authority Explained
+                </div>
+                
+                <h1 class="text-4xl lg:text-6xl font-bold leading-tight mb-6 fade-in fade-in-delay-1">
+                    Your Gateway to
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-green-400">
+                        Better Energy Deals
+                    </span>
+                </h1>
+                
+                <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto fade-in fade-in-delay-2">
+                    A Letter of Authority (LOA) is a simple, safe document that allows us to find you 
+                    the best energy deals - with no obligation to switch.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in fade-in-delay-3">
+                    <button onclick="document.getElementById('loa-form').scrollIntoView({behavior: 'smooth'})" class="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+                        Complete LOA Now <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                    <button onclick="downloadPDF()" class="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-colors">
+                        <i class="fas fa-download mr-2"></i> Download PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Banner -->
+    <section class="bg-primary-600 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap items-center justify-center gap-8 text-white">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-shield-alt"></i>
+                    <span class="font-semibold">100% Secure</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-lock"></i>
+                    <span class="font-semibold">GDPR Compliant</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-award"></i>
+                    <span class="font-semibold">FCA Regulated</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                    Why You Need an LOA
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Without an LOA, we can only provide estimates. With one, we can get you exact quotes 
+                    and identify real savings opportunities.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-eye text-primary-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Full Transparency</h3>
+                    <p class="text-gray-600">See exactly what you're paying now and what you could save</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-primary-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">No Obligation</h3>
+                    <p class="text-gray-600">LOA doesn't commit you to switching - you remain in full control</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-clock text-primary-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Quick Process</h3>
+                    <p class="text-gray-600">Simple 2-minute form gets us working on your savings immediately</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-lock text-primary-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Secure & Confidential</h3>
+                    <p class="text-gray-600">Your data is protected and only used to find you better deals</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">How the LOA Process Works</h2>
+                <p class="text-xl text-gray-600">Simple process, expert guidance, significant savings</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Complete LOA Form</h3>
+                    <p class="text-gray-600">Quick online form or downloadable PDF</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">We Gather Data</h3>
+                    <p class="text-gray-600">Obtain your current rates and usage patterns</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Market Analysis</h3>
+                    <p class="text-gray-600">Compare deals from 30+ suppliers</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Present Options</h3>
+                    <p class="text-gray-600">Show you savings with no pressure to switch</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Access -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">What Information We Access</h2>
+                <p class="text-xl text-gray-600">Complete transparency about what data we need and why</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-info-circle text-primary-600 mr-2"></i>
+                        Account Information
+                    </h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-0.5"></i>
+                            <span class="text-gray-700">Business name and address</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-0.5"></i>
+                            <span class="text-gray-700">Account numbers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-0.5"></i>
+                            <span class="text-gray-700">Meter serial numbers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-0.5"></i>
+                            <span class="text-gray-700">Supply numbers (MPAN/MPRN)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-file-contract text-primary-600 mr-2"></i>
+                        Contract Details
+                    </h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-0.5"></i>
+                            <span class="text-gray-700">Current rates and standing charges</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-0.5"></i>
+                            <span class="text-gray-700">Contract end dates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-0.5"></i>
+                            <span class="text-gray-700">Notice periods</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-0.5"></i>
+                            <span class="text-gray-700">Early termination fees</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-chart-line text-primary-600 mr-2"></i>
+                        Usage Data
+                    </h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-0.5"></i>
+                            <span class="text-gray-700">Annual consumption</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-0.5"></i>
+                            <span class="text-gray-700">Peak usage times</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-0.5"></i>
+                            <span class="text-gray-700">Seasonal variations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-0.5"></i>
+                            <span class="text-gray-700">Historical billing</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Notice -->
+    <section class="py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-amber-50 border-2 border-amber-200 rounded-xl p-8">
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-exclamation-triangle text-amber-600 text-2xl flex-shrink-0 mt-1"></i>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Important Information</h3>
+                        <p class="text-gray-700 mb-4">A Letter of Authority does NOT:</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <span class="text-amber-600 font-bold mr-2">✗</span>
+                                <span class="text-gray-700">Commit you to switching suppliers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-600 font-bold mr-2">✗</span>
+                                <span class="text-gray-700">Allow us to make changes without your consent</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-600 font-bold mr-2">✗</span>
+                                <span class="text-gray-700">Cost you any money</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-600 font-bold mr-2">✗</span>
+                                <span class="text-gray-700">Lock you into our services</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-700 font-semibold">
+                            It simply allows us to gather information to help you save money. You remain in 
+                            complete control of any switching decisions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-gray-50 rounded-lg overflow-hidden">
+                    <button onclick="toggleFaq(0)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors">
+                        <span class="font-semibold text-gray-900">Is signing an LOA safe?</span>
+                        <i class="fas fa-chevron-down text-gray-500 faq-icon-0"></i>
+                    </button>
+                    <div class="px-6 pb-4 hidden faq-content-0">
+                        <p class="text-gray-700">Yes, completely safe. An LOA is a standard industry document that simply allows us to request information from your suppliers. It doesn't give us permission to change anything or commit you to a switch. You remain in full control at all times.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors">
+                        <span class="font-semibold text-gray-900">What exactly can you do with an LOA?</span>
+                        <i class="fas fa-chevron-down text-gray-500 faq-icon-1"></i>
+                    </button>
+                    <div class="px-6 pb-4 hidden faq-content-1">
+                        <p class="text-gray-700">With an LOA, we can: request your current rates and contract details, obtain accurate usage data, check contract end dates, and gather the information needed to negotiate better deals. We cannot: switch your supplier without your explicit consent, make any changes to your account, or commit you to any contracts.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors">
+                        <span class="font-semibold text-gray-900">How long is an LOA valid?</span>
+                        <i class="fas fa-chevron-down text-gray-500 faq-icon-2"></i>
+                    </button>
+                    <div class="px-6 pb-4 hidden faq-content-2">
+                        <p class="text-gray-700">Our LOAs are typically valid for 12 months, which gives us enough time to monitor the market and find you the best deal when your contract is up for renewal. You can revoke it at any time if you change your mind.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors">
+                        <span class="font-semibold text-gray-900">Do I need separate LOAs for different utilities?</span>
+                        <i class="fas fa-chevron-down text-gray-500 faq-icon-3"></i>
+                    </button>
+                    <div class="px-6 pb-4 hidden faq-content-3">
+                        <p class="text-gray-700">Yes, we need separate LOAs for electricity, gas, and water as they're regulated differently. However, you can complete all of them at once through our simple online process.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg overflow-hidden">
+                    <button onclick="toggleFaq(4)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors">
+                        <span class="font-semibold text-gray-900">What if I'm in a contract?</span>
+                        <i class="fas fa-chevron-down text-gray-500 faq-icon-4"></i>
+                    </button>
+                    <div class="px-6 pb-4 hidden faq-content-4">
+                        <p class="text-gray-700">That's fine! We'll note your contract end date and start working on securing you a better deal for when your current contract expires. This ensures you switch at the right time without any exit fees.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOA Form Section -->
+    <section id="loa-form" class="py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Complete Your Letter of Authority</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Fill out the form below to authorize us to work on your behalf
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="bg-primary-600 p-6 text-white">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Official LOA Form 2025</h3>
+                            <p class="text-primary-100">Secure form powered by industry-leading e-signature technology</p>
+                        </div>
+                        <i class="fas fa-shield-alt text-white text-3xl opacity-80"></i>
+                    </div>
+                </div>
+                
+                <!-- Simple Contact Form -->
+                <div class="p-8">
+                    <form onsubmit="handleLOASubmit(event)" class="grid md:grid-cols-2 gap-6">
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Business Name *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="Your business name">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Contact Name *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="Your full name">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                            <input type="email" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="your@email.com">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                            <input type="tel" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="Your phone number">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Business Postcode *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="Business postcode">
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Services Interested In</label>
+                            <div class="grid grid-cols-2 gap-4">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-primary-600 focus:ring-primary-500">
+                                    <span class="ml-2 text-sm text-gray-700">Business Electricity</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-primary-600 focus:ring-primary-500">
+                                    <span class="ml-2 text-sm text-gray-700">Business Gas</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-primary-600 focus:ring-primary-500">
+                                    <span class="ml-2 text-sm text-gray-700">Multi-Site Energy</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-primary-600 focus:ring-primary-500">
+                                    <span class="ml-2 text-sm text-gray-700">Solar Energy</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <label class="flex items-start space-x-2">
+                                <input type="checkbox" required class="mt-1 rounded border-gray-300 text-primary-600 focus:ring-primary-500">
+                                <span class="text-sm text-gray-700">
+                                    I agree to the <a href="#" class="text-primary-600 hover:underline">Terms & Conditions</a> and 
+                                    <a href="#" class="text-primary-600 hover:underline">Privacy Policy</a>. I authorize Watt Savings to obtain my energy information from my current suppliers for the purpose of providing quotes.
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <button type="submit" class="w-full bg-primary-600 text-white py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+                                Submit Letter of Authority
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="bg-primary-50 border-t-4 border-primary-500 p-6">
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-info-circle text-primary-600 text-xl flex-shrink-0 mt-0.5"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Form Security & Privacy</h4>
+                            <p class="text-gray-700 text-sm">
+                                This form meets all UK GDPR requirements. Your data is encrypted and will only be used to obtain energy quotes on your behalf.
+                                You can revoke this authorization at any time by contacting us.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What Happens Next -->
+            <div class="mt-12 bg-white rounded-2xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">What Happens Next?</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-primary-600 font-bold">1</span>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">We Receive Your LOA</h4>
+                        <p class="text-gray-600 text-sm">Instantly processed and assigned to your dedicated account manager</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-primary-600 font-bold">2</span>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Market Analysis</h4>
+                        <p class="text-gray-600 text-sm">We contact suppliers and negotiate the best rates for your business</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-primary-600 font-bold">3</span>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Quote Presentation</h4>
+                        <p class="text-gray-600 text-sm">Receive your personalized quotes within 24-48 hours</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Need Help Completing the Form?</h2>
+            <p class="text-xl text-primary-100 mb-8">Our team is here to assist you with the LOA process</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:01618338661" class="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
+                    <i class="fas fa-phone mr-2"></i>
+                    Call: 0161 833 8661
+                </a>
+                <a href="mailto:info@wattsavings.co.uk" class="bg-primary-700 hover:bg-primary-800 text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Email Support
+                </a>
+            </div>
+            
+            <div class="mt-8 flex flex-wrap justify-center gap-6 text-primary-100">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-check-circle"></i>
+                    <span>No obligation</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>100% secure</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-clock"></i>
+                    <span>2-minute process</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="public/watt-savings-logo.png" alt="Watt Savings" class="h-8 w-auto mb-4 brightness-0 invert">
+                    <p class="text-gray-400 text-sm mb-4">Expert energy consultants helping UK businesses find better energy deals since 2015.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Business Electricity</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Business Gas</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Solar Energy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Green Energy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="loa.html" class="text-gray-400 hover:text-white">Letter of Authority</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Complaints</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p>Phone: 0161 833 8661</p>
+                        <p>Email: info@wattsavings.co.uk</p>
+                        <p>Company Reg: 09760461</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 Watt Savings Ltd. All rights reserved. Authorised and regulated by Ofgem.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            // Mobile menu functionality
+            console.log('Mobile menu toggled');
+        }
+
+        function toggleFaq(index) {
+            const content = document.querySelector(`.faq-content-${index}`);
+            const icon = document.querySelector(`.faq-icon-${index}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+            }
+        }
+
+        function downloadPDF() {
+            alert('PDF download functionality would be implemented here');
+        }
+
+        async function handleLOASubmit(event) {
+            event.preventDefault();
+            
+            // Show loading state
+            const submitButton = event.target.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Processing...';
+            submitButton.disabled = true;
+            
+            try {
+                // Collect form data
+                const formData = new FormData(event.target);
+                const data = Object.fromEntries(formData.entries());
+                
+                // Extract services interested from checkboxes
+                const services = [];
+                if (data.electricityService) services.push('Business Electricity');
+                if (data.gasService) services.push('Business Gas');
+                if (data.multiSiteService) services.push('Multi-Site Energy');
+                if (data.solarService) services.push('Solar Energy');
+                
+                const submissionData = {
+                    ...data,
+                    servicesInterested: services.join(', '),
+                    formType: 'LOA_FORM',
+                    timestamp: new Date().toISOString(),
+                    pageUrl: window.location.href,
+                    userAgent: navigator.userAgent.substring(0, 200)
+                };
+                
+                // Submit to Google Sheets
+                const success = await submitToGoogleSheets(submissionData);
+                
+                if (success) {
+                    alert('Thank you! Your Letter of Authority has been submitted successfully. We will contact you within 24 hours with your energy quotes.');
+                    event.target.reset();
+                } else {
+                    alert('There was an issue submitting your LOA. Please try again or call us directly at 0161 833 8661.');
+                }
+            } catch (error) {
+                console.error('LOA submission error:', error);
+                alert('There was an issue submitting your LOA. Please try again or call us directly at 0161 833 8661.');
+            } finally {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            }
+        }
+        
+        async function submitToGoogleSheets(submissionData) {
+            try {
+                // Your Google Apps Script URL - Replace with actual URL after deployment
+                const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID_HERE/exec';
+                
+                console.log('Submitting LOA data:', submissionData);
+                
+                // Method 1: POST request
+                try {
+                    await fetch(GOOGLE_SHEETS_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(submissionData)
+                    });
+                    console.log('LOA submitted successfully');
+                } catch (fetchError) {
+                    console.log('POST failed, trying backup method');
+                    
+                    // Method 2: GET with parameters as backup
+                    const params = new URLSearchParams();
+                    Object.keys(submissionData).forEach(key => {
+                        let value = submissionData[key];
+                        if (value === undefined || value === null) {
+                            value = '';
+                        } else if (typeof value === 'boolean') {
+                            value = value ? 'Yes' : 'No';
+                        } else {
+                            value = String(value);
+                        }
+                        params.append(key, value);
+                    });
+                    
+                    const getUrl = `${GOOGLE_SHEETS_URL}?${params.toString()}`;
+                    const img = new Image();
+                    img.src = getUrl;
+                }
+                
+                return true;
+            } catch (error) {
+                console.error('Error submitting LOA to Google Sheets:', error);
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

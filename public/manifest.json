@@ -1,0 +1,26 @@
+{
+  "short_name": "Watt Savings",
+  "name": "Watt Savings - Business Energy Comparison",
+  "icons": [
+    {
+      "src": "watt-savings-logo.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "watt-savings-logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "watt-savings-logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#22c55e",
+  "background_color": "#ffffff",
+  "description": "Compare business energy prices and save up to 45% on your gas and electricity bills with Watt Savings."
+}

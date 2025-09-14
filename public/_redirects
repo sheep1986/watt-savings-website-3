@@ -1,0 +1,22 @@
+# Netlify redirects file
+
+# SPA fallback
+/*    /index.html   200
+
+# SEO-friendly redirects
+/quote              /get-quote          301
+/contact            /get-quote          301
+/electricity        /business-electricity  301
+/gas                /business-gas       301
+/solar              /solar-energy       301
+/green              /green-energy       301
+/about-us           /about              301
+/faqs               /faq                301
+/testimonial        /testimonials       301
+/case-study         /case-studies       301
+
+# Legacy URL redirects (if migrating from old site)
+/business-energy    /services           301
+/energy-comparison  /                   301
+/switching-guide    /switching-process  301
+/tips               /energy-saving-tips 301
