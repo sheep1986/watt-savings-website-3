@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Zap, Award, Shield, Users } from 'lucide-react'
-import Logo from './Logo'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -104,9 +103,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="mb-4">
-              <Logo variant="dark" />
-            </div>
+            <img 
+              src="/watt-savings-logo.png" 
+              alt="Watt Savings" 
+              className="h-12 w-auto mb-4 brightness-0 invert"
+            />
             <p className="text-gray-400 mb-4">
               Your trusted energy partner, helping UK businesses save on gas and electricity since 2015.
             </p>
