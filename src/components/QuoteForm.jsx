@@ -160,7 +160,7 @@ const QuoteForm = ({ variant = 'default' }) => {
         <div className="text-center">
           <div className="flex items-center justify-center gap-2 text-sm text-primary-600 font-medium">
             <CheckCircle className="w-4 h-4" />
-            100% Free • No Obligation • Instant Quote
+            No Obligation • Instant Quote
           </div>
           <p className="text-xs text-gray-500 mt-1">
             Compare 30+ suppliers instantly

@@ -539,7 +539,7 @@ const GreenEnergy = () => {
                 Get Your Green Energy Quote 🌱
               </h2>
               <p className="text-xl text-green-100">
-                Start your sustainable energy journey today • 100% renewable • Free consultation
+                Start your sustainable energy journey today • Renewable energy consultation
               </p>
             </div>
             

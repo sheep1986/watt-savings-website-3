@@ -145,8 +145,8 @@ const GetQuote = () => {
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <Shield className="w-8 h-8 text-blue-300 mx-auto mb-2" />
-                  <div className="text-lg font-bold">100% Free Service</div>
-                  <div className="text-sm text-primary-100">No hidden charges</div>
+                  <div className="text-lg font-bold">No Hidden Charges</div>
+                  <div className="text-sm text-primary-100">Complete transparency</div>
                 </div>
               </div>
 
