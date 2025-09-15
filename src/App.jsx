@@ -4,7 +4,6 @@ import { Toaster } from 'react-hot-toast'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import LoadingSpinner from './components/LoadingSpinner'
-import MobileCTA from './components/MobileCTA'
 import ScrollAnimations from './components/ScrollAnimations'
 import ScrollToTop from './components/ScrollToTop'
 
@@ -84,7 +83,6 @@ function App() {
         </Suspense>
       </main>
       <Footer />
-      <MobileCTA />
       <ScrollAnimations />
       <Toaster
         position="top-right"
