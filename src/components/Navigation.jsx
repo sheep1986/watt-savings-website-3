@@ -100,7 +100,6 @@ const Navigation = () => {
               />
               <div className="hidden sm:block">
                 <div className="text-2xl font-bold text-primary-600">Watt Savings</div>
-                <div className="text-xs text-gray-600">Your Energy Partner</div>
               </div>
             </Link>
 
