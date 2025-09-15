@@ -138,13 +138,15 @@ const Navigation = () => {
                 </div>
               ))}
               
-              <Link
-                to="/get-quote"
+              <a
+                href="https://app.watt.co.uk"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="ml-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-primary-600 hover:to-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-2"
               >
                 <span>🚀</span>
                 <span>Get Free Quote</span>
-              </Link>
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -182,12 +184,14 @@ const Navigation = () => {
                     ))}
                   </div>
                 ))}
-                <Link
-                  to="/get-quote"
+                <a
+                  href="https://app.watt.co.uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white text-center py-3 rounded-lg font-semibold hover:from-primary-600 hover:to-primary-700 transition-all duration-300 mt-4"
                 >
                   🚀 Get Free Quote
-                </Link>
+                </a>
               </div>
             </motion.div>
           )}

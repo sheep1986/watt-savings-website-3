@@ -161,13 +161,17 @@ const HomePage = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/get-quote">
+                <a 
+                  href="https://app.watt.co.uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <ShimmerButton variant="white" size="large" className="shadow-xl">
                     <span className="text-xl">🚀</span>
                     Get Free Quote Now
                     <ArrowRight className="w-5 h-5" />
                   </ShimmerButton>
-                </Link>
+                </a>
                 <a href="tel:01618338661">
                   <div className="inline-flex items-center justify-center gap-2 text-white px-8 py-4 font-bold border-2 border-white/30 rounded-lg backdrop-blur-sm bg-white/10 hover:bg-white/20 transition-all duration-300">
                     <Phone className="w-5 h-5" />
@@ -395,14 +399,16 @@ const HomePage = () => {
               Get your free quote in under 60 seconds!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/get-quote"
+              <a
+                href="https://app.watt.co.uk"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
               >
                 <Zap className="w-6 h-6" />
                 Get Your Free Quote
                 <ArrowRight className="w-5 h-5" />
-              </Link>
+              </a>
               <a
                 href="tel:01618338661"
                 className="inline-flex items-center justify-center gap-2 bg-primary-800 text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-900 transition-all duration-300 border-2 border-primary-500"
