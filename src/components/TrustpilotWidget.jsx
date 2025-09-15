@@ -47,6 +47,15 @@ const TrustpilotWidget = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
+          {/* Large Trustpilot Logo */}
+          <div className="flex justify-center mb-6">
+            <img 
+              src="https://cdn.trustpilot.net/brand-assets/4.1.0/logo-black.svg" 
+              alt="Trustpilot" 
+              className="h-12 md:h-16"
+            />
+          </div>
+          
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             What Our Customers Say 💬
           </h2>
