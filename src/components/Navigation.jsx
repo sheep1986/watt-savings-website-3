@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronDown, Phone, Mail, Zap } from 'lucide-react'
+import LogoSVG from './LogoSVG'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -93,11 +94,7 @@ const Navigation = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center group">
-              <img 
-                src="/watt-savings-logo.png" 
-                alt="Watt Savings" 
-                className="h-12 w-auto group-hover:scale-105 transition-transform"
-              />
+              <LogoSVG className="h-12 w-auto group-hover:scale-105 transition-transform" />
             </Link>
 
             {/* Desktop Menu */}
