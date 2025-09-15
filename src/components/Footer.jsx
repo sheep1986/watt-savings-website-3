@@ -106,7 +106,7 @@ const Footer = () => {
             <img 
               src="/watt-logo-new.png" 
               alt="Watt Savings" 
-              className="h-16 w-auto mb-4 brightness-0 invert"
+              className="h-16 w-auto mb-4"
             />
             <p className="text-gray-400 mb-4">
               Your trusted energy partner, helping UK businesses save on gas and electricity since 2015.

@@ -51,7 +51,7 @@ const SupplierCarousel = () => {
             <img
               src={supplier.logo}
               alt={supplier.name}
-              className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+              className="max-w-full max-h-full object-contain transition-all duration-300 hover:scale-105"
               loading="lazy"
             />
           </div>
