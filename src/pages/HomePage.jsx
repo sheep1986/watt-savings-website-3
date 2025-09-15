@@ -92,17 +92,51 @@ const HomePage = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div 
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `url('/images/lightbulb.jpg')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            filter: 'blur(2px)'
-          }}
-        ></div>
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+        {/* Creative Energy Pattern Background */}
+        <div className="absolute inset-0 opacity-10">
+          <svg className="w-full h-full" viewBox="0 0 1200 800" fill="none">
+            {/* Lightning Bolts */}
+            <g opacity="0.3">
+              {[...Array(12)].map((_, i) => (
+                <path
+                  key={`bolt-${i}`}
+                  d={`M${100 + i * 100} ${50 + (i % 3) * 200} L${120 + i * 100} ${100 + (i % 3) * 200} L${110 + i * 100} ${100 + (i % 3) * 200} L${130 + i * 100} ${150 + (i % 3) * 200}`}
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  fill="none"
+                  className="text-yellow-400"
+                />
+              ))}
+            </g>
+            
+            {/* Water Drops */}
+            <g opacity="0.2">
+              {[...Array(15)].map((_, i) => (
+                <circle
+                  key={`drop-${i}`}
+                  cx={150 + i * 80}
+                  cy={200 + (i % 4) * 150}
+                  r="3"
+                  fill="currentColor"
+                  className="text-blue-400"
+                />
+              ))}
+            </g>
+            
+            {/* Gas Flames */}
+            <g opacity="0.25">
+              {[...Array(10)].map((_, i) => (
+                <path
+                  key={`flame-${i}`}
+                  d={`M${200 + i * 120} ${400 + (i % 2) * 100} Q${210 + i * 120} ${380 + (i % 2) * 100} ${220 + i * 120} ${400 + (i % 2) * 100} Q${210 + i * 120} ${390 + (i % 2) * 100} ${200 + i * 120} ${400 + (i % 2) * 100}`}
+                  fill="currentColor"
+                  className="text-orange-400"
+                />
+              ))}
+            </g>
+          </svg>
+        </div>
         
         <div className="container relative z-10 py-20 md:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -111,17 +145,17 @@ const HomePage = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <GlassCard variant="hero" className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6" hover={false}>
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
                 <Zap className="w-5 h-5 text-yellow-300 animate-pulse" />
                 <span className="text-sm font-semibold">Trusted by 10,000+ UK Businesses</span>
-              </GlassCard>
+              </div>
               
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 Save Up to <span className="text-yellow-300">45%</span> on Your
                 <span className="block">Business Energy Bills ⚡</span>
               </h1>
               
-              <p className="text-xl mb-8 text-primary-100">
+              <p className="text-xl mb-8 text-slate-300">
                 Compare prices from 30+ trusted suppliers in seconds. 
                 Free service, expert support, and no interruption to your supply.
               </p>
@@ -135,17 +169,17 @@ const HomePage = () => {
                   </ShimmerButton>
                 </Link>
                 <a href="tel:01618338661">
-                  <GlassCard variant="hero" className="inline-flex items-center justify-center gap-2 text-white px-8 py-4 font-bold border-2 border-white/30" hover={true}>
+                  <div className="inline-flex items-center justify-center gap-2 text-white px-8 py-4 font-bold border-2 border-white/30 rounded-lg backdrop-blur-sm bg-white/10 hover:bg-white/20 transition-all duration-300">
                     <Phone className="w-5 h-5" />
                     0161 833 8661
-                  </GlassCard>
+                  </div>
                 </a>
               </div>
 
               <div className="flex items-center gap-6 mt-8">
                 <div className="flex -space-x-2">
                   {[1,2,3,4,5].map(i => (
-                    <div key={i} className="w-10 h-10 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full border-2 border-white flex items-center justify-center">
+                    <div key={i} className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full border-2 border-white flex items-center justify-center">
                       <Star className="w-5 h-5 text-white fill-white" />
                     </div>
                   ))}
@@ -167,12 +201,9 @@ const HomePage = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="hidden lg:block"
             >
-              <GlassCard variant="light" className="shadow-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-                  ⚡ Get Your Free Energy Quote
-                </h3>
+              <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-8 shadow-2xl">
                 <QuoteForm />
-              </GlassCard>
+              </div>
             </motion.div>
           </div>
         </div>
