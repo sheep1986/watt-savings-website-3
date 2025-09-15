@@ -87,10 +87,10 @@ const QuoteForm = ({ variant = 'default' }) => {
         <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-500 rounded-2xl mb-4">
           <Zap className="w-8 h-8 text-white" />
         </div>
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+        <h3 className="text-2xl font-bold text-white mb-2">
           Get Your Free Quote ⚡
         </h3>
-        <p className="text-gray-600">
+        <p className="text-white/80">
           Enter your postcode to start saving
         </p>
       </div>
@@ -98,8 +98,8 @@ const QuoteForm = ({ variant = 'default' }) => {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Clean Postcode Input */}
         <div className="space-y-3">
-          <label className="block text-sm font-semibold text-gray-700 flex items-center gap-2">
-            <MapPin className="w-4 h-4 text-primary-500" />
+          <label className="block text-sm font-semibold text-white flex items-center gap-2">
+            <MapPin className="w-4 h-4 text-white" />
             Business Postcode
           </label>
           <div className="relative">
@@ -128,13 +128,13 @@ const QuoteForm = ({ variant = 'default' }) => {
           
           {/* Clean Validation Messages */}
           {postcodeValidation && postcodeValidation.valid && (
-            <p className="text-primary-600 text-sm flex items-center gap-2">
+            <p className="text-green-300 text-sm flex items-center gap-2">
               <CheckCircle className="w-4 h-4" />
               {postcodeValidation.district}, {postcodeValidation.region}
             </p>
           )}
           {postcodeValidation && !postcodeValidation.valid && (
-            <p className="text-red-500 text-sm flex items-center gap-2">
+            <p className="text-red-300 text-sm flex items-center gap-2">
               <AlertCircle className="w-4 h-4" />
               {postcodeValidation.error}
             </p>
@@ -154,11 +154,11 @@ const QuoteForm = ({ variant = 'default' }) => {
 
         {/* Simple Security Badge */}
         <div className="text-center">
-          <div className="flex items-center justify-center gap-2 text-sm text-primary-600 font-medium">
+          <div className="flex items-center justify-center gap-2 text-sm text-white font-medium">
             <CheckCircle className="w-4 h-4" />
             100% Free • No Obligation • Instant Quote
           </div>
-          <p className="text-xs text-gray-500 mt-1">
+          <p className="text-xs text-white/60 mt-1">
             Compare 30+ suppliers instantly
           </p>
         </div>
