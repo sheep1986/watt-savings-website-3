@@ -316,7 +316,7 @@ const ServicesPage = () => {
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-primary-500 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -532,7 +532,7 @@ const ServicesPage = () => {
                 <p className="text-primary-100 text-sm">Your success is our priority</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <Globe className="w-12 h-12 text-green-300 mx-auto mb-4" />
+                <Globe className="w-12 h-12 text-primary-300 mx-auto mb-4" />
                 <h3 className="font-bold text-lg mb-2">Sustainable</h3>
                 <p className="text-primary-100 text-sm">Environmentally responsible solutions</p>
               </div>

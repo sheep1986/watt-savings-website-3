@@ -211,7 +211,7 @@ const SwitchingProcess = () => {
                     <ul className="space-y-2">
                       {step.details.map((detail, idx) => (
                         <li key={idx} className="flex items-center gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                          <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0" />
                           <span className="text-sm">{detail}</span>
                         </li>
                       ))}

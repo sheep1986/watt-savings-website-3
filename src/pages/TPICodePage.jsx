@@ -110,12 +110,12 @@ const TPICodePage = () => {
                 </div>
               </div>
 
-              <div className="bg-green-50 border-l-4 border-green-400 p-6 mb-8 rounded-lg">
+              <div className="bg-primary-50 border-l-4 border-primary-400 p-6 mb-8 rounded-lg">
                 <div className="flex items-center gap-2 mb-2">
-                  <Shield className="w-5 h-5 text-green-600" />
-                  <h2 className="text-xl font-bold text-green-800">Certified TPI</h2>
+                  <Shield className="w-5 h-5 text-primary-600" />
+                  <h2 className="text-xl font-bold text-primary-800">Certified TPI</h2>
                 </div>
-                <p className="text-green-700">
+                <p className="text-primary-700">
                   Watt Savings is a certified Third Party Intermediary (TPI) committed to upholding 
                   the highest standards of professional conduct in the energy market.
                 </p>
@@ -157,7 +157,7 @@ const TPICodePage = () => {
                     <ul className="space-y-1">
                       {principle.details.map((detail, idx) => (
                         <li key={idx} className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-primary-500 flex-shrink-0" />
                           <span className="text-sm text-gray-700">{detail}</span>
                         </li>
                       ))}
@@ -176,7 +176,7 @@ const TPICodePage = () => {
                     <ul className="space-y-2">
                       {section.commitments.map((commitment, idx) => (
                         <li key={idx} className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                          <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
                           <span className="text-gray-700">{commitment}</span>
                         </li>
                       ))}

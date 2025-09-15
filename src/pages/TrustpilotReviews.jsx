@@ -22,7 +22,7 @@ const TrustpilotReviews = () => {
               transition={{ duration: 0.6 }}
             >
               <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-                <Shield className="w-5 h-5 text-green-300" />
+                <Shield className="w-5 h-5 text-primary-300" />
                 <span className="text-sm font-semibold">Verified Reviews</span>
               </div>
               

@@ -118,7 +118,7 @@ const QuoteForm = ({ variant = 'default' }) => {
                 <div className="w-5 h-5 border-2 border-primary-500 border-t-transparent rounded-full animate-spin"></div>
               ) : postcodeValidation ? (
                 postcodeValidation.valid ? (
-                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <CheckCircle className="w-5 h-5 text-primary-500" />
                 ) : (
                   <AlertCircle className="w-5 h-5 text-red-500" />
                 )
@@ -128,7 +128,7 @@ const QuoteForm = ({ variant = 'default' }) => {
           
           {/* Clean Validation Messages */}
           {postcodeValidation && postcodeValidation.valid && (
-            <p className="text-green-600 text-sm flex items-center gap-2">
+            <p className="text-primary-600 text-sm flex items-center gap-2">
               <CheckCircle className="w-4 h-4" />
               {postcodeValidation.district}, {postcodeValidation.region}
             </p>
@@ -154,7 +154,7 @@ const QuoteForm = ({ variant = 'default' }) => {
 
         {/* Simple Security Badge */}
         <div className="text-center">
-          <div className="flex items-center justify-center gap-2 text-sm text-green-600 font-medium">
+          <div className="flex items-center justify-center gap-2 text-sm text-primary-600 font-medium">
             <CheckCircle className="w-4 h-4" />
             100% Free • No Obligation • Instant Quote
           </div>

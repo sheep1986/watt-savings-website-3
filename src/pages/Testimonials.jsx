@@ -309,7 +309,7 @@ const Testimonials = () => {
                   "{testimonial.testimonial}"
                 </p>
 
-                <div className="bg-gradient-to-r from-green-500 to-primary-600 text-white rounded-lg p-4 text-center">
+                <div className="bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg p-4 text-center">
                   <div className="text-xl font-bold">{testimonial.savings}</div>
                   <div className="text-sm opacity-90">Annual Savings</div>
                 </div>

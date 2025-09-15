@@ -53,7 +53,7 @@ const TrustpilotWidget = () => {
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="flex gap-1">
               {[1,2,3,4,5].map(i => (
-                <Star key={i} className="w-8 h-8 text-green-500 fill-green-500" />
+                <Star key={i} className="w-8 h-8 text-primary-500 fill-primary-500" />
               ))}
             </div>
             <div>
@@ -61,9 +61,9 @@ const TrustpilotWidget = () => {
               <p className="text-gray-600">Based on 2,847 reviews</p>
             </div>
           </div>
-          <div className="inline-flex items-center gap-2 bg-green-100 px-4 py-2 rounded-full">
-            <Star className="w-5 h-5 text-green-600 fill-green-600" />
-            <span className="font-semibold text-green-800">Excellent Rating on Trustpilot</span>
+          <div className="inline-flex items-center gap-2 bg-primary-100 px-4 py-2 rounded-full">
+            <Star className="w-5 h-5 text-primary-600 fill-primary-600" />
+            <span className="font-semibold text-primary-800">Excellent Rating on Trustpilot</span>
           </div>
         </motion.div>
       </div>
@@ -83,7 +83,7 @@ const TrustpilotWidget = () => {
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="font-bold text-lg">{review.name}</h3>
                   {review.verified && (
-                    <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full font-semibold">
+                    <span className="bg-primary-100 text-primary-700 text-xs px-2 py-1 rounded-full font-semibold">
                       ✓ Verified
                     </span>
                   )}
@@ -100,7 +100,7 @@ const TrustpilotWidget = () => {
                     key={i}
                     className={`w-5 h-5 ${
                       i < review.rating
-                        ? 'text-green-500 fill-green-500'
+                        ? 'text-primary-500 fill-primary-500'
                         : 'text-gray-300 fill-gray-300'
                     }`}
                   />
@@ -123,7 +123,7 @@ const TrustpilotWidget = () => {
         >
           <a
             href="/trustpilot-reviews"
-            className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+            className="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
           >
             View All Reviews on Trustpilot
             <Star className="w-5 h-5" />

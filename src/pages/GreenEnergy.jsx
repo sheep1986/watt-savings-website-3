@@ -214,7 +214,7 @@ const GreenEnergy = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-500 via-emerald-600 to-teal-700 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 text-white overflow-hidden">
         <div 
           className="absolute inset-0 opacity-20"
           style={{
@@ -241,14 +241,14 @@ const GreenEnergy = () => {
                 Power Your Business with <span className="text-green-200">Green Energy</span> 🌱
               </h1>
               
-              <p className="text-xl mb-8 text-green-100">
+              <p className="text-xl mb-8 text-primary-100">
                 Make the switch to 100% renewable energy. Reduce your carbon footprint, 
                 enhance your brand reputation, and contribute to a sustainable future.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <div className="text-3xl font-bold text-green-200">0%</div>
+                  <div className="text-3xl font-bold text-primary-200">0%</div>
                   <div className="text-sm">Carbon Emissions</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
@@ -569,11 +569,11 @@ const GreenEnergy = () => {
                   className="bg-gray-50 rounded-xl p-6"
                 >
                   <h3 className="font-bold text-lg mb-3 flex items-start gap-2">
-                    <span className="text-green-600">Q:</span>
+                    <span className="text-primary-600">Q:</span>
                     {faq.q}
                   </h3>
                   <p className="text-gray-600 pl-6">
-                    <span className="font-semibold text-green-600">A:</span> {faq.a}
+                    <span className="font-semibold text-primary-600">A:</span> {faq.a}
                   </p>
                 </motion.div>
               ))}

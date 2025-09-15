@@ -261,7 +261,7 @@ const BusinessBenefits = () => {
                 <ul className="space-y-2">
                   {benefit.details.map((detail, idx) => (
                     <li key={idx} className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-primary-500 flex-shrink-0" />
                       <span className="text-sm text-gray-600">{detail}</span>
                     </li>
                   ))}
@@ -305,7 +305,7 @@ const BusinessBenefits = () => {
                   <ul className="space-y-3 text-left">
                     {type.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0" />
                         <span className="text-sm">{benefit}</span>
                       </li>
                     ))}
@@ -348,7 +348,7 @@ const BusinessBenefits = () => {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-600">After:</span>
-                    <span className="font-bold text-green-600">{item.after}</span>
+                    <span className="font-bold text-primary-600">{item.after}</span>
                   </div>
                   <div className="border-t pt-4 flex justify-between items-center">
                     <span className="font-semibold">Saving:</span>
@@ -356,7 +356,7 @@ const BusinessBenefits = () => {
                   </div>
                 </div>
                 
-                <div className="bg-gradient-to-r from-green-500 to-primary-600 text-white rounded-lg p-4">
+                <div className="bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg p-4">
                   <div className="text-3xl font-bold">{item.percentage}</div>
                   <div className="text-sm opacity-90">Improvement</div>
                 </div>

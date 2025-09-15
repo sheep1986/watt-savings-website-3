@@ -424,7 +424,7 @@ const FAQ = () => {
                         <div className={`flex-shrink-0 p-2 rounded-lg ${
                           faq.category === 'electricity' ? 'bg-blue-100 text-blue-600' :
                           faq.category === 'gas' ? 'bg-orange-100 text-orange-600' :
-                          faq.category === 'switching' ? 'bg-green-100 text-green-600' :
+                          faq.category === 'switching' ? 'bg-primary-100 text-primary-600' :
                           faq.category === 'pricing' ? 'bg-purple-100 text-purple-600' :
                           faq.category === 'contracts' ? 'bg-indigo-100 text-indigo-600' :
                           faq.category === 'support' ? 'bg-pink-100 text-pink-600' :
@@ -510,7 +510,7 @@ const FAQ = () => {
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <Mail className="w-12 h-12 text-green-300 mx-auto mb-4" />
+                <Mail className="w-12 h-12 text-primary-300 mx-auto mb-4" />
                 <h3 className="font-bold text-lg mb-3">Email Support</h3>
                 <p className="text-primary-100 mb-4">Get detailed written answers</p>
                 <a

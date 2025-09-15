@@ -408,7 +408,7 @@ const EnergySavingTips = () => {
                 </div>
                 <h3 className="font-bold text-xl mb-3">{tip.title}</h3>
                 <p className="text-gray-600 mb-4">{tip.desc}</p>
-                <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold inline-block">
+                <div className="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-semibold inline-block">
                   Save {tip.savings}
                 </div>
               </motion.div>
@@ -444,7 +444,7 @@ const EnergySavingTips = () => {
                 <ul className="space-y-2 mb-4">
                   {sector.tips.map((tip, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-sm">
-                      <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
+                      <Check className="w-4 h-4 text-primary-500 flex-shrink-0" />
                       {tip}
                     </li>
                   ))}
@@ -493,7 +493,7 @@ const EnergySavingTips = () => {
                     <div>
                       <h4 className="font-bold text-lg">{tip.title}</h4>
                       <span className={`text-xs px-2 py-1 rounded-full ${
-                        tip.difficulty === 'Easy' ? 'bg-green-100 text-green-800' :
+                        tip.difficulty === 'Easy' ? 'bg-primary-100 text-primary-800' :
                         tip.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-800' :
                         'bg-red-100 text-red-800'
                       }`}>
@@ -502,7 +502,7 @@ const EnergySavingTips = () => {
                     </div>
                   </div>
                   <p className="text-gray-600 mb-3">{tip.description}</p>
-                  <div className="font-semibold text-green-600">{tip.savings}</div>
+                  <div className="font-semibold text-primary-600">{tip.savings}</div>
                 </motion.div>
               ))}
             </div>
@@ -529,7 +529,7 @@ const EnergySavingTips = () => {
                     <div>
                       <h4 className="font-bold text-lg">{tip.title}</h4>
                       <span className={`text-xs px-2 py-1 rounded-full ${
-                        tip.difficulty === 'Easy' ? 'bg-green-100 text-green-800' :
+                        tip.difficulty === 'Easy' ? 'bg-primary-100 text-primary-800' :
                         tip.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-800' :
                         'bg-red-100 text-red-800'
                       }`}>
@@ -538,7 +538,7 @@ const EnergySavingTips = () => {
                     </div>
                   </div>
                   <p className="text-gray-600 mb-3">{tip.description}</p>
-                  <div className="font-semibold text-green-600">{tip.savings}</div>
+                  <div className="font-semibold text-primary-600">{tip.savings}</div>
                 </motion.div>
               ))}
             </div>
@@ -565,7 +565,7 @@ const EnergySavingTips = () => {
                     <div>
                       <h4 className="font-bold text-lg">{tip.title}</h4>
                       <span className={`text-xs px-2 py-1 rounded-full ${
-                        tip.difficulty === 'Easy' ? 'bg-green-100 text-green-800' :
+                        tip.difficulty === 'Easy' ? 'bg-primary-100 text-primary-800' :
                         tip.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-800' :
                         'bg-red-100 text-red-800'
                       }`}>
@@ -574,7 +574,7 @@ const EnergySavingTips = () => {
                     </div>
                   </div>
                   <p className="text-gray-600 mb-3">{tip.description}</p>
-                  <div className="font-semibold text-green-600">{tip.savings}</div>
+                  <div className="font-semibold text-primary-600">{tip.savings}</div>
                 </motion.div>
               ))}
             </div>
@@ -611,7 +611,7 @@ const EnergySavingTips = () => {
                 <ul className="space-y-3">
                   {season.tips.map((tip, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-sm">
-                      <Check className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                      <Check className="w-4 h-4 text-primary-500 flex-shrink-0 mt-0.5" />
                       {tip}
                     </li>
                   ))}

@@ -139,7 +139,7 @@ const GetQuote = () => {
                   <div className="text-sm text-primary-100">Get your quote fast</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <TrendingDown className="w-8 h-8 text-green-300 mx-auto mb-2" />
+                  <TrendingDown className="w-8 h-8 text-primary-300 mx-auto mb-2" />
                   <div className="text-lg font-bold">Save Up to 45%</div>
                   <div className="text-sm text-primary-100">On your energy bills</div>
                 </div>

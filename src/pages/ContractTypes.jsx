@@ -406,11 +406,11 @@ const ContractTypes = () => {
                 <p className="text-gray-600 mb-4">{contract.description}</p>
                 
                 <div className="mb-4">
-                  <h4 className="font-semibold text-green-700 mb-2">Pros:</h4>
+                  <h4 className="font-semibold text-primary-700 mb-2">Pros:</h4>
                   <ul className="text-sm space-y-1">
                     {contract.pros.map((pro, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        <Check className="w-4 h-4 text-primary-500 flex-shrink-0" />
                         {pro}
                       </li>
                     ))}
@@ -441,7 +441,7 @@ const ContractTypes = () => {
                   <div className="flex justify-between text-sm">
                     <span>Risk:</span>
                     <span className={`font-semibold ${
-                      contract.risk === 'Low' ? 'text-green-600' :
+                      contract.risk === 'Low' ? 'text-primary-600' :
                       contract.risk === 'Medium' ? 'text-yellow-600' :
                       'text-red-600'
                     }`}>{contract.risk}</span>
@@ -482,11 +482,11 @@ const ContractTypes = () => {
                 
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-green-700 mb-2">Advantages:</h4>
+                    <h4 className="font-semibold text-primary-700 mb-2">Advantages:</h4>
                     <ul className="text-sm space-y-1">
                       {term.advantages.map((advantage, idx) => (
                         <li key={idx} className="flex items-center gap-2">
-                          <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
+                          <Check className="w-4 h-4 text-primary-500 flex-shrink-0" />
                           {advantage}
                         </li>
                       ))}
@@ -550,11 +550,11 @@ const ContractTypes = () => {
                 
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-green-700 mb-2">Recommended:</h4>
+                    <h4 className="font-semibold text-primary-700 mb-2">Recommended:</h4>
                     <ul className="text-sm space-y-1">
                       {business.recommended.map((rec, idx) => (
                         <li key={idx} className="flex items-center gap-2">
-                          <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
+                          <Check className="w-4 h-4 text-primary-500 flex-shrink-0" />
                           {rec}
                         </li>
                       ))}
@@ -665,9 +665,9 @@ const ContractTypes = () => {
                   <p className="text-red-600 text-sm">{pitfall.impact}</p>
                 </div>
                 
-                <div className="bg-green-50 rounded-lg p-3">
-                  <h4 className="font-semibold text-green-700 text-sm mb-1">How to Avoid:</h4>
-                  <p className="text-green-600 text-sm">{pitfall.avoidance}</p>
+                <div className="bg-primary-50 rounded-lg p-3">
+                  <h4 className="font-semibold text-primary-700 text-sm mb-1">How to Avoid:</h4>
+                  <p className="text-primary-600 text-sm">{pitfall.avoidance}</p>
                 </div>
               </motion.div>
             ))}

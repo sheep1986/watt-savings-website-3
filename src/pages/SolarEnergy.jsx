@@ -396,7 +396,7 @@ const SolarEnergy = () => {
                   <ul className="space-y-1">
                     {solar.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                        <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        <Check className="w-4 h-4 text-primary-500 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}

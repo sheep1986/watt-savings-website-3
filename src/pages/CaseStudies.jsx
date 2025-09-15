@@ -306,7 +306,7 @@ const CaseStudies = () => {
                     <p className="text-sm opacity-90">{study.industry} • {study.location}</p>
                   </div>
                   <div className="absolute top-4 right-4">
-                    <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                    <div className="bg-primary-500 text-white px-3 py-1 rounded-full text-sm font-bold">
                       {study.savingPercentage} saved
                     </div>
                   </div>
@@ -324,7 +324,7 @@ const CaseStudies = () => {
                     </div>
                   </div>
                   
-                  <div className="bg-gradient-to-r from-green-500 to-primary-600 text-white rounded-lg p-4 mb-6">
+                  <div className="bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg p-4 mb-6">
                     <div className="text-center">
                       <div className="text-2xl font-bold">{study.savingAmount}</div>
                       <div className="text-sm opacity-90">Annual Savings</div>
@@ -347,7 +347,7 @@ const CaseStudies = () => {
                       <ul className="space-y-1">
                         {study.results.map((result, idx) => (
                           <li key={idx} className="flex items-center gap-2">
-                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                            <CheckCircle className="w-4 h-4 text-primary-500 flex-shrink-0" />
                             <span className="text-gray-600 text-sm">{result}</span>
                           </li>
                         ))}

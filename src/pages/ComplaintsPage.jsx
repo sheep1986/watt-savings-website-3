@@ -181,7 +181,7 @@ const ComplaintsPage = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <CheckCircle className="w-5 h-5 text-primary-600" />
                     What We Promise
                   </h3>
                   <ul className="space-y-2 text-gray-600">
@@ -199,9 +199,9 @@ const ComplaintsPage = () => {
                     Customer Satisfaction
                   </h3>
                   <div className="space-y-4">
-                    <div className="bg-green-50 p-4 rounded-lg">
-                      <div className="text-2xl font-bold text-green-600">95%</div>
-                      <div className="text-sm text-green-700">Complaints resolved at first contact</div>
+                    <div className="bg-primary-50 p-4 rounded-lg">
+                      <div className="text-2xl font-bold text-primary-600">95%</div>
+                      <div className="text-sm text-primary-700">Complaints resolved at first contact</div>
                     </div>
                     <div className="bg-blue-50 p-4 rounded-lg">
                       <div className="text-2xl font-bold text-blue-600">2.1 days</div>

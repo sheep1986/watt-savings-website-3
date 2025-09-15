@@ -247,7 +247,7 @@ const LargeBusiness = () => {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-primary-500 flex-shrink-0" />
                       <span className="text-sm text-gray-600">{benefit}</span>
                     </li>
                   ))}
@@ -287,7 +287,7 @@ const LargeBusiness = () => {
                 <ul className="space-y-2 mb-6">
                   {solution.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-primary-500 flex-shrink-0" />
                       <span className="text-sm">{feature}</span>
                     </li>
                   ))}
@@ -331,7 +331,7 @@ const LargeBusiness = () => {
                     <span>{study.industry}</span>
                     <span>{study.sites}</span>
                   </div>
-                  <div className="bg-gradient-to-r from-green-500 to-primary-600 text-white rounded-lg p-4">
+                  <div className="bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg p-4">
                     <div className="text-2xl font-bold">{study.saving}</div>
                     <div className="text-sm opacity-90">Annual Savings ({study.percentage})</div>
                   </div>
