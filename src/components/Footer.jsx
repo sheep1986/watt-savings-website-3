@@ -226,9 +226,9 @@ const Footer = () => {
       <div className="bg-black py-4">
         <div className="container">
           <div className="text-center text-sm text-gray-500">
-            <p>© {currentYear} Watt Savings Ltd. All rights reserved. Company Registration No: 12345678</p>
+            <p>© {currentYear} Watt Utilities UK Ltd. All rights reserved. Company Registration: 03912588</p>
             <p className="mt-1">
-              Part of the Watt Group | Ofgem Registration: ABC123 | VAT No: GB123456789
+              Registered Office: St Ann's House, Manchester, M2 7LP
             </p>
           </div>
         </div>
