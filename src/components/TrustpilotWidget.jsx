@@ -61,9 +61,14 @@ const TrustpilotWidget = () => {
               <p className="text-gray-600">Based on 2,847 reviews</p>
             </div>
           </div>
-          <div className="inline-flex items-center gap-2 bg-primary-100 px-4 py-2 rounded-full">
-            <Star className="w-5 h-5 text-primary-600 fill-primary-600" />
-            <span className="font-semibold text-primary-800">Excellent Rating on Trustpilot</span>
+          <div className="inline-flex items-center gap-3 bg-blue-50 px-6 py-3 rounded-full border border-blue-100">
+            <Star className="w-5 h-5 text-[#00b67a] fill-[#00b67a]" />
+            <span className="font-semibold text-gray-800">Excellent Rating on</span>
+            <img 
+              src="https://cdn.trustpilot.net/brand-assets/4.1.0/logo-black.svg" 
+              alt="Trustpilot" 
+              className="h-5"
+            />
           </div>
         </motion.div>
       </div>
