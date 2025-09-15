@@ -274,15 +274,17 @@ const HomePage = () => {
                 <Link to={service.link} className="block group h-full">
                   <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 h-full bg-white transform hover:-translate-y-2">
                     <div 
-                      className="h-48 bg-cover bg-center"
+                      className="h-48 bg-cover bg-center relative"
                       style={{ backgroundImage: `url('${service.image}')` }}
                     >
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                      <div className="absolute bottom-4 left-4 text-white">
-                        <div className="text-3xl mb-2 transform group-hover:scale-110 transition-transform">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                      <div className="absolute top-4 right-4">
+                        <div className="text-3xl transform group-hover:scale-110 transition-transform bg-white/90 backdrop-blur-sm rounded-full w-12 h-12 flex items-center justify-center">
                           {service.emoji}
                         </div>
-                        <h3 className="text-xl font-bold">{service.title}</h3>
+                      </div>
+                      <div className="absolute bottom-4 left-4 text-white">
+                        <h3 className="text-xl font-bold drop-shadow-lg">{service.title}</h3>
                       </div>
                     </div>
                     <div className="p-6">
