@@ -92,15 +92,12 @@ const Navigation = () => {
         <div className="container">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3 group">
+            <Link to="/" className="flex items-center group">
               <img 
                 src="/watt-savings-logo.png" 
                 alt="Watt Savings" 
                 className="h-12 w-auto group-hover:scale-105 transition-transform"
               />
-              <div className="hidden sm:block">
-                <div className="text-2xl font-bold text-primary-600">Watt Savings</div>
-              </div>
             </Link>
 
             {/* Desktop Menu */}
