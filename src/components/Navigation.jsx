@@ -96,7 +96,7 @@ const Navigation = () => {
               <img 
                 src="/watt-logo-new.png" 
                 alt="Watt Savings" 
-                className="h-12 w-auto group-hover:scale-105 transition-transform"
+                className="h-16 w-auto group-hover:scale-105 transition-transform"
               />
             </Link>
 
