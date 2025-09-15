@@ -6,17 +6,17 @@ const LogoSVG = ({ className = "h-12 w-auto", variant = "default" }) => {
   return (
     <svg 
       className={className}
-      viewBox="0 0 200 60" 
+      viewBox="0 0 480 80" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
     >
       {/* Watt text in blue */}
       <text 
         x="10" 
-        y="40" 
-        fontSize="32" 
+        y="50" 
+        fontSize="42" 
         fontWeight="bold" 
-        fill="#3b82f6"
+        fill="#1d4ed8"
         fontFamily="system-ui, -apple-system, sans-serif"
       >
         Watt
@@ -24,21 +24,32 @@ const LogoSVG = ({ className = "h-12 w-auto", variant = "default" }) => {
       
       {/* Savings text in black/white */}
       <text 
-        x="85" 
-        y="40" 
-        fontSize="32" 
+        x="140" 
+        y="50" 
+        fontSize="42" 
         fontWeight="bold" 
-        fill={isDark ? "#ffffff" : "#111827"}
+        fill={isDark ? "#ffffff" : "#000000"}
         fontFamily="system-ui, -apple-system, sans-serif"
       >
         Savings
       </text>
       
-      {/* Lightning bolt accent */}
+      {/* Curved underline */}
       <path 
-        d="M 175 15 L 165 30 L 172 30 L 165 45 L 180 25 L 172 25 L 175 15 Z" 
-        fill="#fbbf24"
+        d="M 20 60 Q 240 75 460 60" 
+        stroke={isDark ? "#ffffff" : "#000000"}
+        strokeWidth="3"
+        fill="none"
         opacity="0.8"
+      />
+      
+      {/* Blue accent curve on the right */}
+      <path 
+        d="M 400 55 Q 420 65 440 55" 
+        stroke="#1d4ed8"
+        strokeWidth="2"
+        fill="none"
+        opacity="0.6"
       />
     </svg>
   )
