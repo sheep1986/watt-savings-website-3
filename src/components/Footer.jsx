@@ -104,7 +104,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <img 
-              src="/watt-savings-logo.png" 
+              src="/watt-logo-new.png" 
               alt="Watt Savings" 
               className="h-12 w-auto mb-4 brightness-0 invert"
             />

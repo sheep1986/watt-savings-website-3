@@ -94,7 +94,7 @@ const Navigation = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center group">
               <img 
-                src="/watt-savings-logo.png" 
+                src="/watt-logo-new.png" 
                 alt="Watt Savings" 
                 className="h-12 w-auto group-hover:scale-105 transition-transform"
               />
