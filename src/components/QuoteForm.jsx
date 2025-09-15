@@ -80,7 +80,7 @@ const QuoteForm = ({ variant = 'default' }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`rounded-3xl p-10 max-w-md mx-auto ${variant === 'dark' ? 'bg-white/95 backdrop-blur-xl' : 'bg-white shadow-xl'}`}
+      className="max-w-md mx-auto"
     >
       {/* Simple Header */}
       <div className="text-center mb-8">

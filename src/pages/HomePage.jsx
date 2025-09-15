@@ -205,9 +205,7 @@ const HomePage = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="hidden lg:block"
             >
-              <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-8 shadow-2xl">
-                <QuoteForm />
-              </div>
+              <QuoteForm />
             </motion.div>
           </div>
         </div>
