@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import LoadingSpinner from './components/LoadingSpinner'
 import MobileCTA from './components/MobileCTA'
 import ScrollAnimations from './components/ScrollAnimations'
+import ScrollToTop from './components/ScrollToTop'
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage'))
@@ -37,6 +38,7 @@ const NotFound = lazy(() => import('./pages/NotFound'))
 function App() {
   return (
     <div className="min-h-screen flex flex-col">
+      <ScrollToTop />
       <Navigation />
       <main className="flex-grow">
         <Suspense fallback={<LoadingSpinner />}>
