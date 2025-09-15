@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ChevronDown, Phone, Mail, Zap } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -67,25 +67,6 @@ const Navigation = () => {
 
   return (
     <>
-      {/* Top Bar */}
-      <div className={`bg-gradient-to-r from-primary-600 to-primary-700 text-white py-2 transition-all duration-300 ${scrolled ? 'h-0 overflow-hidden' : ''}`}>
-        <div className="container flex justify-between items-center text-sm">
-          <div className="flex items-center gap-6">
-            <a href="tel:01618338661" className="flex items-center gap-2 hover:text-primary-100 transition-colors">
-              <Phone size={16} />
-              <span className="font-semibold">0161 833 8661</span>
-            </a>
-            <a href="mailto:info@wattsavings.co.uk" className="hidden sm:flex items-center gap-2 hover:text-primary-100 transition-colors">
-              <Mail size={16} />
-              <span>info@wattsavings.co.uk</span>
-            </a>
-          </div>
-          <div className="flex items-center gap-2">
-            <Zap size={16} className="text-yellow-300 animate-pulse" />
-            <span className="font-semibold">Save up to 45% on your energy bills!</span>
-          </div>
-        </div>
-      </div>
 
       {/* Main Navigation */}
       <nav className={`sticky top-0 z-50 bg-white transition-all duration-300 ${scrolled ? 'shadow-lg' : 'shadow-md'}`}>
