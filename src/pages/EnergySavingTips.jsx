@@ -705,13 +705,15 @@ const EnergySavingTips = () => {
               Put these tips into action and start reducing your energy bills today
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/get-quote"
+              <a
+                href="https://app.watt.co.uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white text-orange-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300"
               >
                 Get Energy Assessment
                 <ArrowRight className="w-5 h-5" />
-              </Link>
+              </a>
               <a
                 href="tel:01618338661"
                 className="inline-flex items-center justify-center gap-2 bg-orange-800 text-white px-8 py-4 rounded-lg font-bold hover:bg-orange-900 transition-all duration-300 border-2 border-orange-500"

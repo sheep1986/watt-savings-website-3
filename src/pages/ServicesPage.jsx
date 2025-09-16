@@ -246,13 +246,15 @@ const ServicesPage = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/get-quote"
+                <a
+                  href="https://app.watt.co.uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 shadow-xl"
                 >
                   <Calculator className="w-5 h-5" />
                   Get Free Consultation
-                </Link>
+                </a>
                 <a
                   href="#services"
                   className="inline-flex items-center justify-center gap-2 bg-primary-900/50 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-900/70 transition-all duration-300 border-2 border-white/30"
@@ -322,13 +324,13 @@ const ServicesPage = () => {
                     ))}
                   </ul>
                   
-                  <Link
+                  <a
                     to={service.link}
                     className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 group-hover:translate-x-1 transition-all"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  </a>
                 </div>
               </motion.div>
             ))}
@@ -509,13 +511,15 @@ const ServicesPage = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link
-                to="/get-quote"
+              <a
+                href="https://app.watt.co.uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300"
               >
                 Get Free Consultation
                 <ArrowRight className="w-5 h-5" />
-              </Link>
+              </a>
               <a
                 href="tel:01618338661"
                 className="inline-flex items-center justify-center gap-2 bg-primary-800 text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-900 transition-all duration-300 border-2 border-primary-400"

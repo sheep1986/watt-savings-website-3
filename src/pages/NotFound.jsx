@@ -45,20 +45,22 @@ const NotFound = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Link
+                <a
                   to="/"
                   className="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300"
                 >
                   <Home className="w-5 h-5" />
                   Go Home
-                </Link>
-                <Link
-                  to="/get-quote"
+                </a>
+                <a
+                  href="https://app.watt.co.uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-primary-900/50 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-900/70 transition-all duration-300 border-2 border-white/30"
                 >
                   <Lightbulb className="w-5 h-5" />
                   Get Quote Instead
-                </Link>
+                </a>
               </div>
               
               <p className="text-sm text-primary-200">
@@ -85,7 +87,7 @@ const NotFound = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Link
+                <a
                   to={link.link}
                   className="block bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 group"
                 >
@@ -99,7 +101,7 @@ const NotFound = () => {
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
-                </Link>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -123,13 +125,13 @@ const NotFound = () => {
                 <Phone className="w-5 h-5" />
                 Call: 0161 833 8661
               </a>
-              <Link
+              <a
                 to="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors"
               >
                 Contact Us
                 <ArrowRight className="w-5 h-5" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

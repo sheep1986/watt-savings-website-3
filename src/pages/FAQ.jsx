@@ -526,13 +526,15 @@ const FAQ = () => {
                 <Calculator className="w-12 h-12 text-blue-300 mx-auto mb-4" />
                 <h3 className="font-bold text-lg mb-3">Get a Quote</h3>
                 <p className="text-primary-100 mb-4">Free energy comparison</p>
-                <Link
-                  to="/get-quote"
+                <a
+                  href="https://app.watt.co.uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white text-primary-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   <Calculator className="w-4 h-4" />
                   Get Quote
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -544,13 +546,15 @@ const FAQ = () => {
                 Contact our team for personalized answers to your specific energy questions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/get-quote"
+                <a
+                  href="https://app.watt.co.uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white text-primary-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
                 >
                   Get Personalized Quote
                   <ArrowRight className="w-4 h-4" />
-                </Link>
+                </a>
                 <a
                   href="tel:01618338661"
                   className="inline-flex items-center gap-2 bg-primary-800 text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-900 transition-colors border-2 border-primary-400"
@@ -579,12 +583,12 @@ const FAQ = () => {
                 <p className="text-gray-600 mb-4">
                   Understand how the UK energy market works and how it affects your business.
                 </p>
-                <Link
+                <a
                   to="/energy-insights"
                   className="text-primary-600 font-semibold hover:text-primary-700"
                 >
                   Learn More →
-                </Link>
+                </a>
               </div>
 
               <div className="bg-white rounded-xl p-6 shadow-lg">
@@ -593,12 +597,12 @@ const FAQ = () => {
                 <p className="text-gray-600 mb-4">
                   Practical advice to reduce your business energy consumption and costs.
                 </p>
-                <Link
+                <a
                   to="/energy-saving-tips"
                   className="text-primary-600 font-semibold hover:text-primary-700"
                 >
                   Read Tips →
-                </Link>
+                </a>
               </div>
 
               <div className="bg-white rounded-xl p-6 shadow-lg">
@@ -607,12 +611,12 @@ const FAQ = () => {
                 <p className="text-gray-600 mb-4">
                   Explore our complete range of business energy and consultancy services.
                 </p>
-                <Link
+                <a
                   to="/services"
                   className="text-primary-600 font-semibold hover:text-primary-700"
                 >
                   View Services →
-                </Link>
+                </a>
               </div>
             </div>
           </div>

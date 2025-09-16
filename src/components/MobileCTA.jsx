@@ -45,14 +45,16 @@ const MobileCTA = () => {
                     className="overflow-hidden bg-primary-800"
                   >
                     <div className="grid grid-cols-2 gap-2 p-3">
-                      <Link
-                        to="/get-quote"
+                      <a
+                        href="https://app.watt.co.uk"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         onClick={() => setIsExpanded(false)}
                         className="flex items-center justify-center gap-2 bg-white text-primary-600 py-3 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                       >
                         <MessageCircle className="w-4 h-4" />
                         <span className="text-sm">Get Quote</span>
-                      </Link>
+                      </a>
                       <a
                         href="tel:01618338661"
                         onClick={() => setIsExpanded(false)}

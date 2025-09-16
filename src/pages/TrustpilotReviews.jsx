@@ -52,13 +52,15 @@ const TrustpilotReviews = () => {
                   View on Trustpilot
                   <ExternalLink className="w-5 h-5" />
                 </a>
-                <Link
-                  to="/get-quote"
+                <a
+                  href="https://app.watt.co.uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-primary-900/50 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-900/70 transition-all duration-300 border-2 border-white/30"
                 >
                   Get Your Quote
                   <ArrowRight className="w-5 h-5" />
-                </Link>
+                </a>
               </div>
             </motion.div>
           </div>
@@ -134,13 +136,15 @@ const TrustpilotReviews = () => {
               Experience the same exceptional service that earns us 5-star reviews. 
               Start saving on your business energy costs today.
             </p>
-            <Link
-              to="/get-quote"
+            <a
+              href="https://app.watt.co.uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300"
             >
               Get Your Free Quote
               <ArrowRight className="w-5 h-5" />
-            </Link>
+            </a>
           </motion.div>
         </div>
       </section>

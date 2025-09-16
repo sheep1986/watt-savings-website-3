@@ -189,13 +189,15 @@ const EnergyInsights = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/get-quote"
+                <a
+                  href="https://app.watt.co.uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300"
                 >
                   Get Market Analysis
                   <ArrowRight className="w-5 h-5" />
-                </Link>
+                </a>
               </div>
             </motion.div>
           </div>
@@ -289,13 +291,13 @@ const EnergyInsights = () => {
                     </div>
                   </div>
                   
-                  <Link
+                  <a
                     to={`/insights/${article.id}`}
                     className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:gap-3 transition-all"
                   >
                     Read Article
                     <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  </a>
                 </div>
               </motion.article>
             ))}
@@ -396,13 +398,13 @@ const EnergyInsights = () => {
                     </div>
                   </div>
                   
-                  <Link
+                  <a
                     to={`/insights/${article.id}`}
                     className="inline-flex items-center gap-2 text-primary-600 font-semibold text-sm hover:gap-3 transition-all"
                   >
                     Read More
                     <ArrowRight className="w-3 h-3" />
-                  </Link>
+                  </a>
                 </div>
               </motion.article>
             ))}
