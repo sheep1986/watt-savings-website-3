@@ -59,8 +59,8 @@ const Navigation = () => {
       title: '💬 Support',
       dropdown: [
         { name: '❓ FAQ', path: '/faq' },
-        { name: '📝 Get Quote', path: '/get-quote' },
-        { name: '📞 Contact Us', path: '/get-quote' },
+        { name: '📝 Get Quote', path: 'https://app.watt.co.uk', external: true },
+        { name: '📞 Contact Us', path: 'https://app.watt.co.uk', external: true },
       ]
     },
   ]
@@ -104,15 +104,27 @@ const Navigation = () => {
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden"
                       >
-                        {item.dropdown.map((subItem, subIndex) => (
-                          <Link
-                            key={subIndex}
-                            to={subItem.path}
-                            className="block px-4 py-3 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors border-b border-gray-50 last:border-0"
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
+                        {item.dropdown.map((subItem, subIndex) => 
+                          subItem.external ? (
+                            <a
+                              key={subIndex}
+                              href={subItem.path}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block px-4 py-3 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors border-b border-gray-50 last:border-0"
+                            >
+                              {subItem.name}
+                            </a>
+                          ) : (
+                            <Link
+                              key={subIndex}
+                              to={subItem.path}
+                              className="block px-4 py-3 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors border-b border-gray-50 last:border-0"
+                            >
+                              {subItem.name}
+                            </Link>
+                          )
+                        )}
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -154,15 +166,27 @@ const Navigation = () => {
                 {navItems.map((item, index) => (
                   <div key={index} className="mb-4">
                     <div className="font-semibold text-gray-900 mb-2">{item.title}</div>
-                    {item.dropdown.map((subItem, subIndex) => (
-                      <Link
-                        key={subIndex}
-                        to={subItem.path}
-                        className="block py-2 pl-4 text-gray-600 hover:text-primary-600 transition-colors"
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
+                    {item.dropdown.map((subItem, subIndex) => 
+                      subItem.external ? (
+                        <a
+                          key={subIndex}
+                          href={subItem.path}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block py-2 pl-4 text-gray-600 hover:text-primary-600 transition-colors"
+                        >
+                          {subItem.name}
+                        </a>
+                      ) : (
+                        <Link
+                          key={subIndex}
+                          to={subItem.path}
+                          className="block py-2 pl-4 text-gray-600 hover:text-primary-600 transition-colors"
+                        >
+                          {subItem.name}
+                        </Link>
+                      )
+                    )}
                   </div>
                 ))}
                 <a

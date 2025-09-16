@@ -23,7 +23,6 @@ const ServicesPage = lazy(() => import('./pages/ServicesPage'))
 const CaseStudies = lazy(() => import('./pages/CaseStudies'))
 const Testimonials = lazy(() => import('./pages/Testimonials'))
 const FAQ = lazy(() => import('./pages/FAQ'))
-const GetQuote = lazy(() => import('./pages/GetQuote'))
 const EnergyInsights = lazy(() => import('./pages/EnergyInsights'))
 const BusinessBenefits = lazy(() => import('./pages/BusinessBenefits'))
 const LargeBusiness = lazy(() => import('./pages/LargeBusiness'))
@@ -69,7 +68,6 @@ function App() {
             
             {/* Support */}
             <Route path="/faq" element={<FAQ />} />
-            <Route path="/get-quote" element={<GetQuote />} />
             
             {/* Legal */}
             <Route path="/terms" element={<TermsPage />} />
